@@ -1,43 +1,23 @@
-import React , {useState} from 'react';
-import { useForm } from './useForm';
-const App = () =>  {
-  const [count , setCount] = useState(10);
-  const[email , setEmail] = useState("");
-  const [password , setPassword] = useState("");
-  const [values, handleChange] = useForm ({email:'' , password: ''});
-  const [values2 , handleChange2] = useForm({firstName:"" , lastName: ""});
-  useState(()=> 10);
+import logo from './logo.svg';
+import './App.css';
 
+function App() {
   return (
-    <div onClick="">
-      <button onClick={()=> setCount(count - 1)}>-</button>
-       {count}
-
-       <div>
-         < input 
-         type="text" 
-         name="email" 
-         value={email} 
-         onChange = {e => setEmail(e.target.value)}/>
-        < input 
-        type = "text" 
-        name = "password" 
-        value={password} 
-        onChange = {e => setPassword(e.target.value)}/>
-
-       </div>
-       <div>
-       < input 
-         type="text" 
-         name="email" 
-         value={ values.email} 
-         onChange = {handleChange}/>
-         < input 
-        type = "text" 
-        name = "password" 
-        value={values.password} 
-        onChange = {handleChange}/>
-       </div>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
